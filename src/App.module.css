@@ -1,0 +1,5 @@
+.nav {
+  display: flex;
+  min-width: 1600px;
+  background-color: red;
+}

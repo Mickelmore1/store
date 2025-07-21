@@ -1,0 +1,10 @@
+.container {
+  min-width: max-content;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: black;
+  margin: 16px;
+}
