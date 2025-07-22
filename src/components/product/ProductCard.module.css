@@ -1,0 +1,23 @@
+.card {
+  width: 304px;
+  height: 565px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  max-width: 288px;
+  max-height: 384px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.price {
+  font-size: 12px;
+}
+
+.description {
+  font-size: 8px;
+}
