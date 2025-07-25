@@ -1,10 +1,10 @@
-import NavBar from "../navbar/NavBar";
-
-function Basket() {
+function Basket({ basketList }) {
   return (
     <>
-      <NavBar></NavBar>
       <h1>This is the basket</h1>;
+      {basketList.map((product) => (
+        <h3>{product.title}</h3>
+      ))}
     </>
   );
 }

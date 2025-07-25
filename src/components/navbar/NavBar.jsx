@@ -6,7 +6,6 @@ function NavBar() {
     <div className={styles.container}>
       <Link to="/">Home</Link>
       <Link to="/store">Store</Link>
-      <Link to="/basket">Checkout</Link>
     </div>
   );
 }
