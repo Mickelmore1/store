@@ -11,6 +11,7 @@ const Store = () => {
   const [subTotal, addToSubTotal] = useState(0.0);
 
   function AddToBasket(product, qty = 1) {
+    product.qty = qty;
     addToBasket([...basket, product]);
     const price = product.price * qty;
     let total = Math.round((subTotal + price + Number.EPSILON) * 100) / 100;
@@ -37,7 +38,6 @@ const Store = () => {
     <>
       <NavBar></NavBar>
       <div className={styles.container}>
-        <h1>THIS IS THE STORE</h1>
         <div className={styles.layout}>
           <div className={styles.cardWrapper}>
             {productsList.map((product) => (
@@ -48,7 +48,11 @@ const Store = () => {
               ></ProductCard>
             ))}
           </div>
-          <Basket key={basket} basketList={basket} subTotal={subTotal}></Basket>
+          <Basket
+            className={styles.basket}
+            basketList={basket}
+            subTotal={subTotal}
+          ></Basket>
         </div>
       </div>
     </>

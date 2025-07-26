@@ -13,3 +13,7 @@
 .layout {
   display: flex;
 }
+
+.basket {
+  display: block;
+}
