@@ -8,9 +8,13 @@ import ProductCard from "../product/ProductCard.jsx";
 const Store = () => {
   const { productsList, error, loading } = FetchProducts();
   const [basket, addToBasket] = useState([]);
+  const [subTotal, addToSubTotal] = useState(0.0);
 
-  function AddToBasket(product) {
+  function AddToBasket(product, qty = 1) {
     addToBasket([...basket, product]);
+    const price = product.price * qty;
+    let total = Math.round((subTotal + price + Number.EPSILON) * 100) / 100;
+    addToSubTotal(total);
   }
 
   useEffect(() => {
@@ -44,7 +48,7 @@ const Store = () => {
               ></ProductCard>
             ))}
           </div>
-          <Basket key={basket} basketList={basket}></Basket>
+          <Basket key={basket} basketList={basket} subTotal={subTotal}></Basket>
         </div>
       </div>
     </>
