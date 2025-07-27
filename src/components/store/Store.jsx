@@ -27,7 +27,6 @@ const Store = () => {
       <>
         <NavBar></NavBar>
         <div className={styles.container}>
-          <h1>THIS IS THE STORE</h1>
           <p>Loading...</p>
         </div>
       </>
@@ -36,7 +35,7 @@ const Store = () => {
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar className={styles.nav}></NavBar>
       <div className={styles.container}>
         <div className={styles.layout}>
           <div className={styles.cardWrapper}>

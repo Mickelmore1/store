@@ -17,3 +17,7 @@
 .basket {
   display: block;
 }
+
+.container {
+  margin-top: 96px;
+}

@@ -5,7 +5,10 @@
 }
 
 .nav {
-  display: flex;
-  min-width: 1600px;
-  background-color: red;
+  position: relative;
+  z-index: 1;
+}
+
+.box {
+  margin-top: 64px;
 }
